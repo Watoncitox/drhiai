@@ -1,0 +1,7 @@
+{
+  "name": "drhiai",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
