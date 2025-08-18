@@ -1,20 +1,37 @@
+<ion-menu side="start" menuId="main-menu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+  <ion-item button routerLink="/home" class="menu-item-hover">Inicio</ion-item>
+  <ion-item button routerLink="/masoterapia.page" class="menu-item-hover">Masoterapia</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
     <ion-title>
       Blank
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="background-image" id="main-content">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="overlay">
+    <h1 class="title">Bienvenidos</h1>
+    <p class="subtitle">Tratamientos de estética profesional</p>
+        <img src="/assets/imagenes/fondo/marmoleado rosado.avif" alt="Fondo" class="top-text-img" />
+        <div class="top-text-content">
+          <p>Este es el cuadro de texto en la parte superior</p>
+        </div>
+    <ion-button expand="block" shape="round">Ver Más</ion-button>
   </div>
 </ion-content>
