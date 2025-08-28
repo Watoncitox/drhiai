@@ -1,0 +1,90 @@
+<div class="floating-menu-container">
+  <ion-header class="main-header" [translucent]="true">
+    <ion-toolbar class="sticky-toolbar">
+      <img src="/assets/imagenes/logo/logo.jpg" alt="Sala de espera" class="logo" />
+      <ion-buttons slot="end">
+        <ion-button routerLink="/nosotros">Nosotros</ion-button>
+        <ion-button routerLink="/servicios">Servicios</ion-button>
+        <ion-button routerLink="/gif-card">Gif Card</ion-button>
+        <ion-button routerLink="/productos">Productos</ion-button> 
+        <ion-button routerLink="/contacto">Contacto</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+<ion-content [fullscreen]="true" class="background-gradient">
+  <!-- Hero principal -->
+  <section class="hero-section">
+    <img autoplay muted loop playsinline class="hero-bg" src="/assets/imagenes/fondo/servicios/fondo_servicio.png" type="image/png" />
+    <div class="hero-overlay">
+      <h1 class="hero-title">DYB <span class="highlight">Servicios</span></h1>
+      <ion-button expand="block" shape="round" fill="solid" class="cta-btn" (click)="agendar()">
+        <ion-icon name="calendar-outline" slot="start"></ion-icon>
+        Agenda tu Hora
+      </ion-button>
+    </div>
+  </section>
+
+  <div class="card-grid">
+    <!-- Card 1 -->
+    <div class="custom-card">
+      <img src="assets/imagenes/fondo/servicios/1.png" alt="Cosmetología">
+      <h3>Cosmetología</h3>
+      <ion-button class="saber-mas" expand="block" fill="outline" routerLink="/cosmetologia">
+        Saber más
+      </ion-button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="custom-card">
+      <img src="assets/imagenes/fondo/servicios/2.png" alt="Manicure y pedicure">
+      <h3>Manicure y pedicure</h3>
+      <ion-button class="saber-mas" expand="block" fill="outline" routerLink="/estetica-facial">
+        Saber más
+      </ion-button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="custom-card">
+      <img src="assets/imagenes/fondo/servicios/3.png" alt="Maquillaje Profesional">
+      <h3>Maquillaje Profesional</h3>
+      <ion-button class="saber-mas" expand="block" fill="outline" routerLink="/estetica-corporal">
+        Saber más
+      </ion-button>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="custom-card">
+      <img src="assets/imagenes/fondo/servicios/4.png" alt="Tratamientos Corporales y Spa">
+      <h3>Tratamientos Corporales y Spa</h3>
+      <ion-button class="saber-mas" expand="block" fill="outline" routerLink="/spa">
+        Saber más
+      </ion-button>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="custom-card">
+      <img src="assets/imagenes/fondo/servicios/6.png" alt="Estilismo y color">
+      <h3>Estilismo y color</h3>
+      <ion-button class="saber-mas" expand="block" fill="outline" routerLink="/nutriologia">
+        Saber más
+      </ion-button>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="custom-card">
+      <img src="assets/imagenes/fondo/servicios/5.png" alt="Tratamientos capilares">
+      <h3>Tratamientos capilares</h3>
+      <ion-button class="saber-mas" expand="block" fill="outline" routerLink="/evaluacion">
+        Saber más
+      </ion-button>
+    </div>
+  </div>
+
+  <div class="custom-separator">
+  <span class="separator-text">La ciencia de sentirse bien</span>
+  </div>
+
+
+</ion-content>

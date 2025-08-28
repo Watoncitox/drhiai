@@ -1,37 +1,119 @@
-<ion-menu side="start" menuId="main-menu" contentId="main-content">
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Menú</ion-title>
+<div class="floating-menu-container">
+  <ion-header class="main-header" [translucent]="true">
+    <ion-toolbar class="sticky-toolbar">
+      <img src="/assets/imagenes/logo/logo.jpg" alt="Sala de espera" class="logo" />
+      <ion-buttons slot="end">
+        <ion-button routerLink="/nosotros">Nosotros</ion-button>
+        <ion-button routerLink="/servicios">Servicios</ion-button>
+        <ion-button routerLink="/gif-card">Gif Card</ion-button>
+        <ion-button routerLink="/productos">Productos</ion-button> 
+        <ion-button routerLink="/contacto">Contacto</ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-    <ion-list>
-  <ion-item button routerLink="/home" class="menu-item-hover">Inicio</ion-item>
-  <ion-item button routerLink="/masoterapia.page" class="menu-item-hover">Masoterapia</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
+</div>
 
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="background-gradient">
+  <!-- Hero principal -->
+  <section class="hero-section">
+    <video autoplay muted loop playsinline class="hero-bg">
+      <source src="/assets/videos/video_presentacion/video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay">
+      <h1 class="hero-title">Bienvenida a <span class="highlight">Nuestra Clínica Estética</span></h1>
+      <p class="hero-subtitle">Cuidamos tu <strong>belleza</strong> y <strong>bienestar</strong></p>
+      <ion-button expand="block" shape="round" fill="solid" class="cta-btn" (click)="agendar()">
+        <ion-icon name="calendar-outline" slot="start"></ion-icon>
+        Agenda tu Hora
+      </ion-button>
+    </div>
+  </section>
 
-<ion-content class="background-image" id="main-content">
 
-  <div class="overlay">
-    <h1 class="title">Bienvenidos</h1>
-    <p class="subtitle">Tratamientos de estética profesional</p>
-        <img src="/assets/imagenes/fondo/marmoleado rosado.avif" alt="Fondo" class="top-text-img" />
-        <div class="top-text-content">
-          <p>Este es el cuadro de texto en la parte superior</p>
+  <section id="sobre-nosotros" class="about-section">
+    <div class="about-content">
+      <!-- Imagen / Fotografía -->
+      <div class="about-img-container">
+        <img src="/assets/imagenes/fondo/dry/foto.jpg" alt="Drhiaishna Martínez Miranda" class="about-img" />
+      </div>
+
+      <!-- Texto principal -->
+      <div class="about-info">
+        <h2>Sobre Nosotros</h2>
+
+        <p>
+          En <strong>DYB</strong> creemos que la belleza es el reflejo del cuidado y la dedicación.
+          Nuestro proyecto nace de la unión entre <strong>Drhiaishna Martínez Miranda</strong> y <strong>Bastian Andres Sanches Muñoz</strong>,
+          quienes unieron su vocación y talentos para dar vida a este espacio de estética profesional.
+        </p>
+
+        <p>
+          Drhiaishna aporta la experiencia y pasión en el área de la estética, mientras que Bastian,
+          Ingeniero en Informática, respalda con apoyo tecnológico y estratégico cada etapa de este proyecto.
+        </p>
+
+        <p>
+          Nuestro sueño en conjunto es ofrecer un centro de estética integral que combine profesionalismo,
+          calidad y valores sólidos, donde cada persona se sienta única, cuidada y valorada.
+        </p>
+
+        <div style="margin-top:18px;">
+          <a href="/contacto" class="cta-btn" 
+            style="--background:#d6336c; --color:#fff; padding:10px 18px; font-weight:700;">
+            Conócenos Más
+          </a>
         </div>
-    <ion-button expand="block" shape="round">Ver Más</ion-button>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="custom-separator">
+  <span class="separator-text">La ciencia de sentirse bien</span>
   </div>
+
+  <section id="drhiaishna" class="about-section">
+  <div class="about-content">
+      <!-- Imagen / Fotografía -->
+      <div class="about-img-container">
+        <img src="/assets/imagenes/fondo/dry/presentacion.jpg" 
+            alt="Drhiaishna Martínez Miranda" class="about-img" />
+      </div>
+
+      <!-- Texto principal -->
+      <div class="about-info">
+        <h2>Drhiaishna Martínez Miranda</h2>
+
+        <p>
+          Drhiaishna es una profesional apasionada por la estética, actualmente culminando sus estudios en
+          <strong>Estética Profesional en AIEP</strong>
+        </p>
+
+        <p>
+          Cuenta con formación especializada en <strong>tratamientos capilares</strong> (alisado permanente,
+          botox capilar) y con más de un año de experiencia en la prestigiosa peluquería
+          <em>“MARTIN C”</em> en Vitacura.
+        </p>
+
+        <p>
+          En sus servicios particulares ofrece:
+        </p>
+
+        <ul>
+          <li><strong>Tratamientos capilares:</strong> alisados permanentes y botox capilar.</li>
+          <li><strong>Masoterapia:</strong> masajes descontracturantes, relajantes, reductivos y post-operatorios.</li>
+          <li><strong>Estilismo y color:</strong> cortes femeninos y masculinos, tinturas completas, balayage y mechas.</li>
+          <li><strong>Maquillaje profesional:</strong> para toda ocasión.</li>
+          <li><strong>Manicure y pedicure:</strong> aplicación de Soft Gel y acrílico.</li>
+        </ul>
+
+        <p>
+          Su formación profesional se complementa con valores éticos y espirituales adquiridos en su familia
+          y fortalecidos como <strong>Testigo de Jehová</strong>, lo que garantiza compromiso, respeto y responsabilidad en cada atención.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
 </ion-content>

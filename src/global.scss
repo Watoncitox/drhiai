@@ -1,7 +1,3 @@
-body, html, ion-app, ion-content {
-	background: #fff !important;
-	color: #222;
-}
 /*
  * App Global CSS
  * ----------------------------------------------------------------------------
@@ -39,3 +35,9 @@ body, html, ion-app, ion-content {
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+body, html, ion-app, ion-content {
+	background: #fff !important;
+	color: #222;
+}

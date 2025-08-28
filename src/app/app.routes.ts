@@ -14,4 +14,12 @@ export const routes: Routes = [
     path: 'masoterapia',
     loadComponent: () => import('./masoterapia/masoterapia.page').then( m => m.MasoterapiaPage)
   },
+  {
+    path: 'peluqueria',
+    loadComponent: () => import('./peluqueria/peluqueria.page').then( m => m.PeluqueriaPage)
+  },
+  {
+    path: 'servicios',
+    loadComponent: () => import('./servicios/servicios.page').then( m => m.ServiciosPage)
+  },
 ];
